@@ -66,4 +66,7 @@ payload = {
         }
 
 response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)
-print(response.json())
+
+hashtags = response.json().get("choices")[0].get("message").get("content").split(',')
+
+print(hashtags)
