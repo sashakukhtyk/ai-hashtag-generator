@@ -35,32 +35,32 @@ headers = {
 }
 
 payload = {
-            "model": "gpt-4o-mini",
-            "messages": [
+            'model': 'gpt-4o-mini',
+            'messages': [
                 {
-                    "role": "system",
-                    "content": """You are a hashtag generation model. 
+                    'role': 'system',
+                    'content': '''You are a hashtag generation model. 
                     When you get an image as input, your response 
                     should always contain exactly 
-                    30 hashtags separated by commas."""
+                    30 hashtags separated by commas.'''
                 },
                 {
-                    "role": "user",
-                    "content": [
+                    'role': 'user',
+                    'content': [
                         {
-                            "type": "text",
-                            "text": """Provide the hashtags 
-                            for this image:"""
+                            'type': 'text',
+                            'text': '''Provide the hashtags 
+                            for this image:'''
                         },
                         {
-                            "type": "image_url",
-                            "image_url": {
-                                "url": f"""data:image/jpeg;base64,
-                                           {image_base64}"""
+                            'type': 'image_url',
+                            'image_url': {
+                                'url': f'''data:image/jpeg;base64,
+                                           {image_base64}'''
                             }
                         }
                     ]
                 }
             ],
-            "max_tokens": 300
+            'max_tokens': 300
         }
